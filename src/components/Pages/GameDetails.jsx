@@ -2,7 +2,7 @@ import React from "react";
 import BreadcrumbStyle2 from "../Breadcrumb/BreadcrumbStyle2";
 import Section from "../Section";
 import BannerSectionStyle9 from "../Section/BannerSection/BannerSectionStyle9";
-import DoctorDetailsSection from "../Section/DoctorDetailsSection";
+import GameDetailsSection from "../Section/DoctorDetailsSection";
 import AppointmentSectionStyle2 from "../Section/AppointmentSection/AppointmentSectionStyle2";
 import { pageTitle } from "../../helpers/PageTitle";
 
@@ -10,15 +10,15 @@ export default function GameDetails() {
     pageTitle("Doctor Details");
     return (
         <>
-            <BreadcrumbStyle2 />
+            {/* <BreadcrumbStyle2 /> */}
             <Section bottomMd={190} bottomLg={150} bottomXl={110}>
-                <DoctorDetailsSection
+                <GameDetailsSection
                     bgUrl="/images/doctors/doctor_details_bg.svg"
                     imgUrl="/images/doctors/doctor_details.jpeg"
-                    name="Dr. Sarah Lee, MD, MPH, FAPA"
-                    department="Psychiatry Department"
-                    designation="Board-certified Psychiatrist"
-                    description="With more than 15 years of experience learning human psychology and behavior, Dr. Jones is an expert in managing mood disorders and anxiety disorders"
+                    name="Game 2"
+                    department="Download This Game"
+                    designation="Type game 1"
+                    description="comment"
                     social={[
                         { icon: "fa6-brands:facebook-f", href: "/about" },
                         { icon: "fa6-brands:linkedin-in", href: "/about" },
@@ -52,7 +52,7 @@ export default function GameDetails() {
                             subTitle: "Master of Public Health degree",
                         },
                     ]}
-                    degreesHeading="Degrees"
+                    degreesHeading="Details"
                     experiences={[
                         {
                             title: "Worked in community mental health clinics, private practice, and academic medical centers.",
@@ -67,14 +67,14 @@ export default function GameDetails() {
                             title: "Experience managing complex cases that involve both mental health and medical issues.",
                         },
                     ]}
-                    experiencesHeading="Experiences"
+                    experiencesHeading="Rules"
                     awards={[
                         { title: "Fellow of the American Psychiatric Association (FAPA)." },
                         {
                             title: "Recognized for research contributions with grants from the National Institute of Mental Health (NIMH) and the American Foundation for Suicide Prevention.",
                         },
                     ]}
-                    awardHeading="Awards/Achievements"
+                    awardHeading="Notes"
                 />
             </Section>
             <Section bottomMd={200} bottomLg={150} bottomXl={110}>

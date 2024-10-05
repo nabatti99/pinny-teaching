@@ -193,8 +193,8 @@ export default function Games() {
             <BannerSectionStyle5
                 bgUrl="/images/doctors/banner_bg.svg"
                 imgUrl="/images/doctors/banner_img.png"
-                title="Introduce You to <br />Our Experts"
-                subTitle="The list of certified doctors with years of <br />professional experiences"
+                title="Introduce You to Our Creative Games"
+                subTitle="The collection of engaging games catered to diverse learning styles and ages."
             />
             <Section topMd={65} bottomMd={200} bottomLg={150} bottomXl={110}>
                 <TeamSectionStyle2 data={teamData} />
@@ -202,8 +202,8 @@ export default function Games() {
             <Section className="cs_footer_margin_0">
                 <BannerSectionStyle4
                     bgUrl="images/doctors/banner_bg_2.jpeg"
-                    title="Don’t Let Your Health <br />Take a Backseat!"
-                    subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
+                    title="TEACH WITH EASE"
+                    subTitle="We are committed to providing you with innovative and effective teaching resources to help you inspire and engage your students."
                 />
             </Section>
         </>
