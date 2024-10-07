@@ -37,6 +37,9 @@ export default function Header({ logoSrc, variant }) {
                                 </Link>
                                 <nav className="cs_nav">
                                     <ul className={`${mobileToggle ? "cs_nav_list cs_active" : "cs_nav_list"}`}>
+                                        <li>
+                                            <Link to="/">Home</Link>
+                                        </li>
                                         <li className="menu-item-has-children">
                                             <Link to="/games">Games</Link>
                                             <DropDown>
@@ -50,18 +53,8 @@ export default function Header({ logoSrc, variant }) {
                                                 </ul>
                                             </DropDown>
                                         </li>
-                                        <li className="menu-item-has-children">
+                                        <li>
                                             <Link to="/flash-cards">Flash Cards</Link>
-                                            <DropDown>
-                                                <ul>
-                                                    <li>
-                                                        <Link to="/flash-card?type=FLASHCARD1">Flash Cards-1</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/flash-card?type=FLASHCARD2">Flash Cards-2</Link>
-                                                    </li>
-                                                </ul>
-                                            </DropDown>
                                         </li>
                                         <li>
                                             <Link to="/blog">Blog</Link>

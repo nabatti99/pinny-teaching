@@ -9,19 +9,19 @@ const departmentData = [
         iconUrl: "images/departments/icon_1.svg",
         title: "Topic",
         subTitle: "Description",
-        href: "/departments/department-details",
+        href: "/flash-cards/flash-card-1",
     },
     {
         iconUrl: "images/departments/icon_1.svg",
         title: "Topic",
         subTitle: "Description",
-        href: "/departments/department-details",
+        href: "/flash-cards/flash-card-2",
     },
     {
         iconUrl: "images/departments/icon_1.svg",
         title: "Topic",
         subTitle: "Description",
-        href: "/departments/department-details",
+        href: "/flash-cards/flash-card-3",
     },
 ];
 

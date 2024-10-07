@@ -105,57 +105,61 @@ const blogData = [
 ];
 const awardData = [
     {
-        title: "Malcolm Baldrige National Quality Award",
+        title: "Flash Card 1",
         subTitle:
             "This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.",
         iconUrl: "images/icons/award.svg",
+        href: "/flash-cards/flash-card-1",
     },
     {
-        title: "HIMSS Davies Award",
+        title: "Flash Card 2",
         subTitle: "This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.",
         iconUrl: "images/icons/award.svg",
+        href: "/flash-cards/flash-card-2",
     },
     {
-        title: "Healthgrades National’s Best Hospital",
+        title: "Flash Card 3",
         subTitle: "This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.",
         iconUrl: "images/icons/award.svg",
+        href: "/flash-cards/flash-card-3",
     },
     {
-        title: "Joint Commission Gold Seal of Approval",
+        title: "Flash Card 4",
         subTitle: "This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.",
         iconUrl: "images/icons/award.svg",
+        href: "/flash-cards/flash-card-4",
     },
 ];
 const departmentData = [
     {
         title: "Auditory Learners",
         iconUrl: "images/home_1/department_icon_1.svg",
-        href: "/departments/department-details",
+        href: "/games?type=AUDITORY_LEARNERS",
     },
     {
         title: "Visual Learners",
         iconUrl: "images/home_1/department_icon_2.svg",
-        href: "/departments/department-details",
+        href: "/games?type=VISUAL_LEARNERS",
     },
     {
         title: "Kinesthetic Learners",
         iconUrl: "images/home_1/department_icon_3.svg",
-        href: "/departments/department-details",
+        href: "/games?type=KINESTHETIC_LEARNERS",
     },
     {
         title: "Kindergarten",
         iconUrl: "images/home_1/department_icon_4.svg",
-        href: "/departments/department-details",
+        href: "/games?type=KINDERGARTEN",
     },
     {
         title: "Young Learners",
         iconUrl: "images/home_1/department_icon_5.svg",
-        href: "/departments/department-details",
+        href: "/games?type=YOUNG_LEARNERS",
     },
     {
         title: "Adults",
         iconUrl: "images/home_1/department_icon_6.svg",
-        href: "/departments/department-details",
+        href: "/games?type=ADULTS",
     },
 ];
 

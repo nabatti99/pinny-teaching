@@ -146,7 +146,7 @@ export default function About() {
                 <DepartmentSectionStyle2 sectionTitle="Provides Our Best Services" sectionTitleUp="SERVICES" data={departmentData} />
             </Section> */}
             <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
-                <FeaturesSectionStyle2 sectionTitle="Why Choose Us" imgUrl="images/about/why_choose_us.jpeg" data={featureListData} />
+                <FeaturesSectionStyle2 sectionTitle="Why Choose Us" imgUrl="images/about/why_choose_us.png" data={featureListData} />
             </Section>
             {/* <Section>
                 <FunFactSection bgUrl="images/about/fun_fact_bg.jpeg" data={funFactData} />
