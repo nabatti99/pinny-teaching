@@ -33,7 +33,7 @@ export default function Header({ logoSrc, variant }) {
                         <div className="cs_main_header_in">
                             <div className="cs_main_header_left">
                                 <Link className="cs_site_branding" to="/">
-                                    <img src={logoSrc} alt="Logo" />
+                                    <img src={logoSrc} alt="Logo" style={{ height: "40px", width: "auto" }} />
                                 </Link>
                                 <nav className="cs_nav">
                                     <ul className={`${mobileToggle ? "cs_nav_list cs_active" : "cs_nav_list"}`}>
@@ -114,7 +114,7 @@ export default function Header({ logoSrc, variant }) {
                         <img src="/images/icons/close.svg" alt="Close" />
                     </button>
                     <div className="cs_logo_box">
-                        <img src="/images/logo.svg" alt="Logo" />
+                        <img src="/images/logo.png" alt="Logo" />
                         <div className="cs_height_15" />
                         <h3 className="cs_fs_24 cs_semibold mb-0">Your Partner in Health and Wellness</h3>
                     </div>

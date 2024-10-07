@@ -20,14 +20,7 @@ export default function Footer() {
     return (
         <footer className="cs_footer cs_style_1 cs_heading_color">
             <div className="cs_footer_logo_wrap" style={{ backgroundImage: "url(/images/footer_bg_1.svg)" }}>
-                <div className="cs_footer_brand" style={{ backgroundImage: "url(/images/footer_logo_bg.svg)" }}>
-                    <img src="/images/logo_icon.svg" alt="Logo Icon" className="cs_footer_brand_icon" />
-                    <h2 className="cs_footer_brand_text text-center mt-3">
-                        Pinny
-                        <br />
-                        Teaching
-                    </h2>
-                </div>
+                <div className="cs_footer_brand" style={{ backgroundImage: "url(/images/footer_logo_bg.png)", filter: "drop-shadow(2px 4px 24px #ffffff)" }}></div>
             </div>
             <div className="cs_footer_main">
                 <div className="container">

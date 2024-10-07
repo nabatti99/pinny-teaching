@@ -315,6 +315,14 @@
             display: none;
         }
     }
+
+    .cs_banner_subtitle {
+        max-width: 550px;
+        @media (max-width: 991px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 .cs_banner_8_wrap {
     position: relative;
@@ -422,6 +430,14 @@
             right: initial;
             left: 0;
             max-width: 48%;
+        }
+    }
+
+    .cs_banner_subtitle {
+        max-width: 550px;
+        @media (max-width: 991px) {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

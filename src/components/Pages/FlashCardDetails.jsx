@@ -102,7 +102,7 @@ export default function FlashCardDetails() {
     pageTitle("Flash Card Details");
     return (
         <>
-            <BreadcrumbStyle2 />
+            {/* <BreadcrumbStyle2 /> */}
             <Section topMd={135} topLg={100} topXl={100}>
                 <AboutSectionStyle2
                     title="Pediatric Department"
@@ -111,24 +111,24 @@ export default function FlashCardDetails() {
                 />
             </Section>
 
-            <Section topMd={170} topLg={145} topXl={90}>
+            {/* <Section topMd={170} topLg={145} topXl={90}>
                 <FeaturesSectionStyle3 sectionTitle="Treatments" sectionTitleUp="MORE TYPE OF" data={featureData} />
-            </Section>
-            <Section topMd={200} topLg={150} topXl={100}>
+            </Section> */}
+            {/* <Section topMd={200} topLg={150} topXl={100}>
                 <TeamSectionStyle3 sectionTitle="Related Doctor" data={doctorData} />
-            </Section>
+            </Section> */}
 
             {/* Start Appointment Section */}
-            <Section topMd={190} topLg={145} topXl={105} bottomMd={190} bottomLg={145} bottomXl={110} id="appointment">
+            {/* <Section topMd={190} topLg={145} topXl={105} bottomMd={190} bottomLg={145} bottomXl={110} id="appointment">
                 <AppointmentSection sectionTitle="Appointment" sectionTitleUp="BOOK AN" imgUrl="/images/home_1/appointment.jpeg" />
-            </Section>
+            </Section> */}
             {/* End Appointment Section */}
-            <Section className="cs_footer_margin_0">
+            <Section className="cs_footer_margin_0" topMd={200} topLg={160} topXl={140}>
                 <BannerSectionStyle7
                     imgUrl="/images/departments/banner_img_3.png"
                     bgUrl="/images/departments/banner_bg_3.svg"
-                    title="Don’t Let Your Health <br />Take a Backseat!"
-                    subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
+                    title="TEACH WITH EASE"
+                    subTitle="We are committed to providing you with innovative and effective teaching resources to help you inspire and engage your students."
                 />
             </Section>
         </>

@@ -77,19 +77,19 @@ export default function GameDetails() {
                     awardHeading="Notes"
                 />
             </Section>
-            <Section bottomMd={200} bottomLg={150} bottomXl={110}>
+            {/* <Section bottomMd={200} bottomLg={150} bottomXl={110}>
                 <AppointmentSectionStyle2
                     bgUrl="/images/home_2/appointment_bg.svg"
                     imgUrl="/images/home_2/appointment_img.png"
                     sectionTitle="Appointment"
                     sectionTitleUp="BOOK AN"
                 />
-            </Section>
+            </Section> */}
 
             <Section className="cs_footer_margin_0">
                 <BannerSectionStyle9
-                    title="Don’t Let Your Health <br />Take a Backseat!"
-                    subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
+                    title="TEACH WITH EASE"
+                    subTitle="We are committed to providing you with innovative and effective teaching resources to help you inspire and engage your students."
                     imgUrl="/images/doctors/banner_img_3.png"
                 />
             </Section>
