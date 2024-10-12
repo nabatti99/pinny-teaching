@@ -7,7 +7,7 @@ import AppointmentSectionStyle2 from "../Section/AppointmentSection/AppointmentS
 import { pageTitle } from "../../helpers/PageTitle";
 
 export default function GameDetails() {
-    pageTitle("Doctor Details");
+    pageTitle("Game Details");
     return (
         <>
             {/* <BreadcrumbStyle2 /> */}
@@ -16,7 +16,6 @@ export default function GameDetails() {
                     bgUrl="/images/doctors/doctor_details_bg.svg"
                     imgUrl="/images/doctors/doctor_details.jpeg"
                     name="Game 2"
-                    department="Download This Game"
                     designation="Type game 1"
                     description="comment"
                     social={[
@@ -67,7 +66,7 @@ export default function GameDetails() {
                             title: "Experience managing complex cases that involve both mental health and medical issues.",
                         },
                     ]}
-                    experiencesHeading="Rules"
+                    experiencesHeading="How to play"
                     awards={[
                         { title: "Fellow of the American Psychiatric Association (FAPA)." },
                         {

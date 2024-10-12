@@ -18,7 +18,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "cardiology",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_2.png",
@@ -33,7 +33,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "emergency",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_3.png",
@@ -48,7 +48,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "pediatric",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_4.png",
@@ -63,7 +63,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "others",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_5.png",
@@ -78,7 +78,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "cardiology",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_6.png",
@@ -93,7 +93,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "psychiatry",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_7.png",
@@ -108,7 +108,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "emergency",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_8.png",
@@ -123,7 +123,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "others",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_9.png",
@@ -138,7 +138,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "psychiatry",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_10.png",
@@ -152,7 +152,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "others",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_11.png",
@@ -167,7 +167,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "emergency",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
     {
         imgUrl: "/images/doctors/doctor_12.png",
@@ -182,7 +182,7 @@ const teamData = [
             { icon: "fa6-brands:twitter", href: "/about" },
         ],
         category: "pediatric",
-        href: "/doctors/doctor-details",
+        href: "/games/gameId",
     },
 ];
 

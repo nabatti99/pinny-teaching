@@ -10,7 +10,6 @@ export default function GameDetailsSection({
     bgUrl,
     imgUrl,
     name,
-    department,
     designation,
     description,
     social,
@@ -39,12 +38,16 @@ export default function GameDetailsSection({
                     <div className="col-lg-6">
                         <div className="cs_single_doctor overflow-hidden cs_radius_20">
                             <img src={imgUrl} alt="Doctor" className="w-100" />
-                            <h3 className="cs_white_color cs_accent_bg mb-0 text-center cs_semibold cs_fs_24">{department}</h3>
+                            <a href="#" className="d-block h3 mb-0 text-center cs_semibold cs_fs_24">
+                                Download Now
+                            </a>
                         </div>
-                        <Spacing md="94" lg="60" />
+                        <Spacing md="70" lg="50" />
+                        <List heading={awardHeading} iconUrl="/images/icons/award2.svg" data={awards} />
+                        {/* <Spacing md="94" lg="60" />
                         <ListStyle2 heading={contactInfoHeading} iconUrl="/images/icons/schedule.svg" data={contactInfo} />
                         <Spacing md="66" lg="60" />
-                        <ListStyle3 heading={scheduleHeading} iconUrl="/images/icons/schedule.svg" data={schedules} />
+                        <ListStyle3 heading={scheduleHeading} iconUrl="/images/icons/schedule.svg" data={schedules} /> */}
                     </div>
                     <div className="col-lg-5 offset-lg-1 position-relative">
                         <Spacing md="55" />
@@ -53,20 +56,18 @@ export default function GameDetailsSection({
                         <h3 className="cs_semibold cs_fs_24 mb-0">{designation}</h3>
                         <Spacing md="32" />
                         <p className="mb-0 cs_heading_color">{description}</p>
-                        <div className="cs_social_links cs_accent_bg cs_radius_15">
+                        {/* <div className="cs_social_links cs_accent_bg cs_radius_15">
                             {social?.map((item, index) => (
                                 <Link to={item.href} key={index}>
                                     <Icon icon={item.icon} />
                                 </Link>
                             ))}
-                        </div>
+                        </div> */}
                         <Spacing md="200" xl="150" lg="80" />
                         <Spacing md="35" lg="0" />
                         <List heading={degreesHeading} iconUrl="/images/icons/graduation.svg" data={degrees} />
                         <Spacing md="70" lg="50" />
                         <List heading={experiencesHeading} iconUrl="/images/icons/experience.svg" data={experiences} />
-                        <Spacing md="70" lg="50" />
-                        <List heading={awardHeading} iconUrl="/images/icons/award2.svg" data={awards} />
                     </div>
                 </div>
             </div>
