@@ -4,7 +4,7 @@ import BannerSectionStyle4 from "../Section/BannerSection/BannerSectionStyle4";
 import TeamSectionStyle2 from "../Section/TeamSection/TeamSectionStyle2";
 import Section from "../Section";
 import { pageTitle } from "../../helpers/PageTitle";
-import { getGames } from "../../sheet-api";
+import { getGames } from "../../google-apis/sheet-api";
 
 export default function Games() {
     const [data, setData] = useState([]);

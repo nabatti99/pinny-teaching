@@ -6,7 +6,7 @@ import GameDetailsSection from "../Section/DoctorDetailsSection";
 import AppointmentSectionStyle2 from "../Section/AppointmentSection/AppointmentSectionStyle2";
 import { pageTitle } from "../../helpers/PageTitle";
 import { useParams } from "react-router-dom";
-import { GameHeader, getGameById } from "../../sheet-api";
+import { GameHeader, getGameById } from "../../google-apis/sheet-api";
 import { renderP, renderUl } from "../../utils";
 
 export default function GameDetails() {

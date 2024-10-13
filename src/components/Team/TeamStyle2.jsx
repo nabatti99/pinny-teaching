@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { GameHeader } from "../../sheet-api";
+import { GameHeader } from "../../google-apis/sheet-api";
 import { renderWithBr } from "../../utils";
 
 export default function TeamStyle2(data) {

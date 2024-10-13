@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Spacing from "../../Spacing";
 import TeamStyle2 from "../../Team/TeamStyle2";
 import Pagination from "../../Pagination";
-import { GameHeader } from "../../../sheet-api";
+import { GameHeader } from "../../../google-apis/sheet-api";
 
 export default function TeamSectionStyle2({ data }) {
     const [view, setView] = useState("grid");

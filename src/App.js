@@ -6,22 +6,15 @@ import Appointments from "./components/Pages/Appointments";
 import Blog from "./components/Pages/Blog";
 import BlogDetails from "./components/Pages/BlogDetails";
 import Contact from "./components/Pages/Contact";
+import ErrorPage from "./components/Pages/ErrorPage";
 import FlashCardDetails from "./components/Pages/FlashCardDetails";
 import FlashCards from "./components/Pages/FlashCards";
 import GameDetails from "./components/Pages/GameDetails";
-import ErrorPage from "./components/Pages/ErrorPage";
 import Games from "./components/Pages/Games";
 import Home from "./components/Pages/Home";
+import { GApiService } from "./google-apis/gapi.service";
 
-function start() {
-    // 2. Initialize the JavaScript client library.
-    window.gapi.client.init({
-        apiKey: "AIzaSyDfWCcwC7Z9ipT6iezH_GxtIKKgHdqM9cw",
-        discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-    });
-}
-
-window.gapi.load("client", start);
+GApiService.init();
 
 function App() {
     const { pathname } = useLocation();
