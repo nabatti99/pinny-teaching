@@ -147,14 +147,14 @@ const departmentData = [
         href: "/games?type=KINESTHETIC_LEARNERS",
     },
     {
-        title: "Kindergarten",
+        title: "Young Children",
         iconUrl: "images/home_1/department_icon_4.svg",
-        href: "/games?type=KINDERGARTEN",
+        href: "/games?type=YOUNG_CHILDREN",
     },
     {
-        title: "Young Learners",
+        title: "Adolescents",
         iconUrl: "images/home_1/department_icon_5.svg",
-        href: "/games?type=YOUNG_LEARNERS",
+        href: "/games?type=ADOLESCENTS",
     },
     {
         title: "Adults",

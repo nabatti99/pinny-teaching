@@ -6,24 +6,7 @@ import ListStyle3 from "../../List/ListStyle3";
 import ListStyle2 from "../../List/ListStyle2";
 import Spacing from "../../Spacing";
 
-export default function GameDetailsSection({
-    bgUrl,
-    imgUrl,
-    name,
-    designation,
-    description,
-    social,
-    contactInfo,
-    contactInfoHeading,
-    degrees,
-    degreesHeading,
-    experiences,
-    experiencesHeading,
-    awards,
-    awardHeading,
-    schedules,
-    scheduleHeading,
-}) {
+export default function GameDetailsSection({ bgUrl, imgUrl, name, designation, description, degrees, degreesHeading, experiences, experiencesHeading, awards, awardHeading }) {
     return (
         <div className="cs_doctor_details">
             <div
@@ -52,10 +35,7 @@ export default function GameDetailsSection({
                     <div className="col-lg-5 offset-lg-1 position-relative">
                         <Spacing md="55" />
                         <h2 className="cs_fs_48 mb-0 cs_semibold">{name}</h2>
-                        <Spacing md="12" />
-                        <h3 className="cs_semibold cs_fs_24 mb-0">{designation}</h3>
-                        <Spacing md="32" />
-                        <p className="mb-0 cs_heading_color">{description}</p>
+                        <Spacing md="100" />
                         {/* <div className="cs_social_links cs_accent_bg cs_radius_15">
                             {social?.map((item, index) => (
                                 <Link to={item.href} key={index}>
@@ -63,7 +43,6 @@ export default function GameDetailsSection({
                                 </Link>
                             ))}
                         </div> */}
-                        <Spacing md="200" xl="150" lg="80" />
                         <Spacing md="35" lg="0" />
                         <List heading={degreesHeading} iconUrl="/images/icons/graduation.svg" data={degrees} />
                         <Spacing md="70" lg="50" />

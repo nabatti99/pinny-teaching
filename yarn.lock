@@ -2278,6 +2278,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@maxim_mazurok/gapi.client.discovery-v1@npm:latest":
+  version: 0.1.20200806
+  resolution: "@maxim_mazurok/gapi.client.discovery-v1@npm:0.1.20200806"
+  dependencies:
+    "@types/gapi.client": "npm:*"
+    "@types/gapi.client.discovery-v1": "npm:*"
+  checksum: 10c0/5c01df9bd9baaa0f94760d40033868111721da86bef3e4d77e7de64cdf28fc1a513c5daf9b270aa63d2208f20b43cd172a84d5c88a627bb452e7a93400e9488e
+  languageName: node
+  linkType: hard
+
+"@maxim_mazurok/gapi.client.sheets-v4@npm:latest":
+  version: 0.0.20241001
+  resolution: "@maxim_mazurok/gapi.client.sheets-v4@npm:0.0.20241001"
+  dependencies:
+    "@types/gapi.client": "npm:*"
+    "@types/gapi.client.discovery-v1": "npm:*"
+  checksum: 10c0/99b7db4cb36fcfebb30fb019b0b11b3b6baafe03f54421be55857d91800d265a592100e36a8fa98452f7a7df6f589aefb91a2417e316cc04ffa84fedca5786c5
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -2868,6 +2888,38 @@ __metadata:
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
   checksum: 10c0/12e562c4571da50c7d239e117e688dc434db1bac8be55613294762f84fd77fbd0658ccd553c7d3ab02408f385bc93980992369dd30e2ecd2c68c358e6af8fabf
+  languageName: node
+  linkType: hard
+
+"@types/gapi.client.discovery-v1@npm:*":
+  version: 0.0.4
+  resolution: "@types/gapi.client.discovery-v1@npm:0.0.4"
+  dependencies:
+    "@maxim_mazurok/gapi.client.discovery-v1": "npm:latest"
+  checksum: 10c0/52df0216b67cd40b97de9334fbcca4be5eae47ec8fd8159d5e2a9e0bc3ad4ea365ffde60f6ce9095e7082f68a884cade0e9c627e66284123e383d93ce8a2651d
+  languageName: node
+  linkType: hard
+
+"@types/gapi.client.sheets-v4@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@types/gapi.client.sheets-v4@npm:0.0.4"
+  dependencies:
+    "@maxim_mazurok/gapi.client.sheets-v4": "npm:latest"
+  checksum: 10c0/b1530e1a9f168bcd58906afbe31ef0f3f2161c013731eb624d70c09bbdb13481dd75bacf054434d35eb3aa394315474868c0d97b4dc5d2e3315bf25b259c9984
+  languageName: node
+  linkType: hard
+
+"@types/gapi.client@npm:*":
+  version: 1.0.8
+  resolution: "@types/gapi.client@npm:1.0.8"
+  checksum: 10c0/5b9a26ad4ae7d915c7711ee0084dddcc9d143c9f8ff4b7aba8811f8e94af0140639e9093ada17f8146c3a07f9a189c72fb9ae29d4c8108e330a65de3319a32f8
+  languageName: node
+  linkType: hard
+
+"@types/gapi@npm:^0.0.47":
+  version: 0.0.47
+  resolution: "@types/gapi@npm:0.0.47"
+  checksum: 10c0/014d7326b6182d260c33ae5b7317d7c0271263dde83b9d24fccd78481dce8877f0ec7a110467a626bf9e1c0b73f2b1935c31f5ef66f71f1328ae0926f6e8b0fe
   languageName: node
   linkType: hard
 
@@ -11040,6 +11092,8 @@ __metadata:
     "@testing-library/jest-dom": "npm:^5.17.0"
     "@testing-library/react": "npm:^13.4.0"
     "@testing-library/user-event": "npm:^13.5.0"
+    "@types/gapi": "npm:^0.0.47"
+    "@types/gapi.client.sheets-v4": "npm:^0.0.4"
     bootstrap: "npm:^5.3.2"
     html-react-parser: "npm:^5.0.6"
     react: "npm:^18.2.0"
