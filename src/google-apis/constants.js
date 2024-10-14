@@ -18,6 +18,15 @@ export const FlashCardHeader = {
     DESCRIPTION: "Description",
 };
 
+export const ClassroomTipHeader = {
+    NO: "No",
+    DRIVE_FOLDER_ID: "Drive Folder ID",
+    THUMBNAIL_FILE_ID: "Thumbnail File ID",
+    DOCUMENT_FILE_ID: "Document File ID",
+    NAME: "Name",
+    DATE_AND_AUTHOR: "Date & Author",
+};
+
 export const MemberHeader = {
     NO: "No",
     THUMBNAIL_FILE_ID: "Thumbnail File ID",

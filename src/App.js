@@ -3,8 +3,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import About from "./components/Pages/About";
 import Appointments from "./components/Pages/Appointments";
-import Blog from "./components/Pages/Blog";
-import BlogDetails from "./components/Pages/BlogDetails";
 import Contact from "./components/Pages/Contact";
 import ErrorPage from "./components/Pages/ErrorPage";
 import FlashCardDetails from "./components/Pages/FlashCardDetails";
@@ -13,6 +11,8 @@ import GameDetails from "./components/Pages/GameDetails";
 import Games from "./components/Pages/Games";
 import Home from "./components/Pages/Home";
 import { GApiService } from "./google-apis/gapi.service";
+import ClassroomTip from "./components/Pages/ClassroomTip";
+import ClassroomTipDetails from "./components/Pages/ClassRoomTipDetails";
 
 GApiService.init();
 
@@ -29,8 +29,8 @@ function App() {
                 <Route path="games" element={<Games />} />
                 <Route path="games/:gameId" element={<GameDetails />} />
                 <Route path="about" element={<About />} />
-                <Route path="blog" element={<Blog />} />
-                <Route path="blog/:blogId" element={<BlogDetails />} />
+                <Route path="classroom-tips" element={<ClassroomTip />} />
+                <Route path="classroom-tips/:classroomTipId" element={<ClassroomTipDetails />} />
                 <Route path="appointments" element={<Appointments />} />
                 <Route path="flash-cards" element={<FlashCards />} />
                 <Route path="flash-cards/:flashCardId" element={<FlashCardDetails />} />

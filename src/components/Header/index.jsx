@@ -60,7 +60,7 @@ export default function Header({ logoSrc, variant }) {
                                             <Link to="/flash-cards">Flash Cards</Link>
                                         </li>
                                         <li>
-                                            <Link to="/blog">Blog</Link>
+                                            <Link to="/classroom-tips">Classroom Tips</Link>
                                         </li>
                                         <li>
                                             <Link to="/about">About Us</Link>
