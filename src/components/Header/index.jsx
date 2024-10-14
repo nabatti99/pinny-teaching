@@ -40,7 +40,10 @@ export default function Header({ logoSrc, variant }) {
                                         <li>
                                             <Link to="/">Home</Link>
                                         </li>
-                                        <li className="menu-item-has-children">
+                                        <li>
+                                            <Link to="/games">Games</Link>
+                                        </li>
+                                        {/* <li className="menu-item-has-children">
                                             <Link to="/games">Games</Link>
                                             <DropDown>
                                                 <ul>
@@ -52,7 +55,7 @@ export default function Header({ logoSrc, variant }) {
                                                     </li>
                                                 </ul>
                                             </DropDown>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <Link to="/flash-cards">Flash Cards</Link>
                                         </li>

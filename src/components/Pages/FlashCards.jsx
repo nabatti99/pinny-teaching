@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BannerSectionStyle5 from "../Section/BannerSection/BannerSectionStyle5";
 import Section from "../Section";
 import DepartmentSectionStyle3 from "../Section/DepartmentSection/DepartmentSectionStyle3";
 import BannerSectionStyle6 from "../Section/BannerSection/BannerSectionStyle6";
 import { pageTitle } from "../../helpers/PageTitle";
+import { getFlashCards } from "../../google-apis/sheet-api";
 const departmentData = [
     {
         iconUrl: "images/departments/icon_1.svg",
@@ -26,6 +27,14 @@ const departmentData = [
 ];
 
 export default function FlashCards() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getFlashCards(40, 0).then((res) => {
+            setData(res);
+        });
+    }, []);
+
     pageTitle("Departments");
     return (
         <>
@@ -36,7 +45,7 @@ export default function FlashCards() {
                 subTitle="At Pinny Teaching, we offer a wide range of flashcards on diverse topics that are designed to build your vocabulary and improve your memory."
             />
             <Section bottomMd={140} bottomLg={100} bottomXl={60}>
-                <DepartmentSectionStyle3 data={departmentData} />
+                <DepartmentSectionStyle3 data={data} />
             </Section>
             <Section className="cs_footer_margin_0">
                 <BannerSectionStyle6

@@ -36,3 +36,21 @@ export async function getGamePptx(gameFolderId) {
 
     return file.webContentLink;
 }
+
+export async function getFlashCardPdf(flashCardFolderId) {
+    await GApiService.wait();
+
+    const rawFilesResponse = await window.gapi.client.drive.files.list({
+        q: [`'${flashCardFolderId}' in parents`, "trashed=false", "name contains '.pdf'"].filter(Boolean).join(" and "),
+        fields: "nextPageToken, files(id, name, webContentLink)",
+        spaces: "drive",
+    });
+    const filesResponse = JSON.parse(rawFilesResponse.body);
+
+    if (!filesResponse.files.length) throw new Error("FlashCard pdf not found.");
+    const file = filesResponse.files[0];
+
+    console.log(file);
+
+    return file.webContentLink;
+}

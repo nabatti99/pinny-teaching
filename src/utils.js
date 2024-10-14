@@ -1,5 +1,9 @@
 import parse from "html-react-parser";
 
+export function getRandomImageUrls(width = 1000, height = 1000) {
+    return `https://picsum.photos/${width}/${height}`;
+}
+
 export function getImageUrl(imageFileId) {
     return `https://lh3.googleusercontent.com/d/${imageFileId}`;
 }

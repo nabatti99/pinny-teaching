@@ -15,8 +15,6 @@ export default function GameDetails() {
     const [data, setData] = useState();
     const [gamePptx, setGamePptx] = useState();
 
-    console.log(gamePptx);
-
     useEffect(() => {
         getGameById(Number(gameId)).then((res) => {
             setData(res);
