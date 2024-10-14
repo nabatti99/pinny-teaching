@@ -1,5 +1,9 @@
 import parse from "html-react-parser";
 
+export function getImageUrl(imageFileId) {
+    return `https://lh3.googleusercontent.com/d/${imageFileId}`;
+}
+
 export function renderWithBr(text) {
     const html = text.replace("\n", "<br>");
     return parse(html);

@@ -1,25 +1,35 @@
 import React, { useEffect, useState } from "react";
-import BreadcrumbStyle2 from "../Breadcrumb/BreadcrumbStyle2";
+import { useParams } from "react-router-dom";
+import { getGamePptx, getGameThumbnail } from "../../google-apis/drive-api";
+import { getGameById } from "../../google-apis/sheet-api";
+import { pageTitle } from "../../helpers/PageTitle";
+import { getImageUrl, renderP } from "../../utils";
 import Section from "../Section";
 import BannerSectionStyle9 from "../Section/BannerSection/BannerSectionStyle9";
 import GameDetailsSection from "../Section/DoctorDetailsSection";
-import AppointmentSectionStyle2 from "../Section/AppointmentSection/AppointmentSectionStyle2";
-import { pageTitle } from "../../helpers/PageTitle";
-import { useParams } from "react-router-dom";
-import { GameHeader, getGameById } from "../../google-apis/sheet-api";
-import { renderP, renderUl } from "../../utils";
+import { GameHeader } from "../../google-apis/constants";
 
 export default function GameDetails() {
     const { gameId } = useParams();
 
     const [data, setData] = useState();
-    console.log(data);
+    const [gamePptx, setGamePptx] = useState();
+
+    console.log(gamePptx);
 
     useEffect(() => {
         getGameById(Number(gameId)).then((res) => {
             setData(res);
         });
     }, [gameId]);
+
+    useEffect(() => {
+        if (!data) return;
+
+        getGamePptx(data[GameHeader.DRIVE_FOLDER_ID]).then((res) => {
+            setGamePptx(res);
+        });
+    }, [data]);
 
     pageTitle("Game Details");
     return (
@@ -29,7 +39,8 @@ export default function GameDetails() {
                 {data && (
                     <GameDetailsSection
                         bgUrl="/images/doctors/doctor_details_bg.svg"
-                        imgUrl="/images/doctors/doctor_details.jpeg"
+                        imgUrl={getImageUrl(data[GameHeader.THUMBNAIL_FILE_ID])}
+                        pptxUrl={gamePptx}
                         name={data[GameHeader.NAME]}
                         designation="Type game 1"
                         description="comment"

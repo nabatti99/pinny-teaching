@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { GameHeader } from "../../google-apis/sheet-api";
-import { renderWithBr } from "../../utils";
+import { getImageUrl, renderWithBr } from "../../utils";
+import { GameHeader } from "../../google-apis/constants";
 
 export default function TeamStyle2(data) {
     return (
         <div className="cs_team cs_style_1 cs_type_2 text-center cs_radius_20 overflow-hidden">
             <div className="cs_member_img">
                 <Link to={`/games/${data[GameHeader.NO]}`} className="d-block">
-                    <img src={"https://picsum.photos/200/300"} alt={data[GameHeader.NAME]} />
+                    <img src={getImageUrl(data[GameHeader.THUMBNAIL_FILE_ID])} alt={data[GameHeader.NAME]} />
                 </Link>
                 {/* <div className="cs_label cs_white_color cs_accent_bg">{department}</div> */}
             </div>

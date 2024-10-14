@@ -43,7 +43,7 @@ export default function Footer() {
                         </div>
                         <div className="col-lg-4">
                             <div className="cs_footer_item">
-                                <Newsletter title="Be Our Subscribers" subTitle="To get the latest news about health from our experts" />
+                                <Newsletter title="Follow Us" subTitle="Get in touch with us to get free games, flash cards and new class tips." />
                             </div>
                         </div>
                     </div>

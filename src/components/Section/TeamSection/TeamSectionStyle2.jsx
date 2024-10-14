@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Spacing from "../../Spacing";
 import TeamStyle2 from "../../Team/TeamStyle2";
 import Pagination from "../../Pagination";
-import { GameHeader } from "../../../google-apis/sheet-api";
+import { GameHeader } from "../../../google-apis/constants";
 
 export default function TeamSectionStyle2({ data }) {
     const [view, setView] = useState("grid");
@@ -12,10 +12,12 @@ export default function TeamSectionStyle2({ data }) {
     // Extracting unique categories from teamData
     const uniqueCategories = [...new Set(data.map((doctor) => doctor[GameHeader.LEARNING_STYLE]))];
     const handleFilter = (category) => {
+        console.log(category);
+
         if (category === "ALL") {
             setFilteredData(data);
         } else {
-            const filtered = data.filter((doctor) => doctor.category === category);
+            const filtered = data.filter((game) => game[GameHeader.LEARNING_STYLE] === category);
             setFilteredData(filtered);
         }
         setActive(category);
@@ -72,7 +74,7 @@ export default function TeamSectionStyle2({ data }) {
                 ))}
             </div>
             <Spacing md="90" />
-            <Pagination />
+            {/* <Pagination /> */}
         </div>
     );
 }

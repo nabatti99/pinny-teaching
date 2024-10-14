@@ -2916,7 +2916,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gapi@npm:^0.0.47":
+"@types/gapi.drive@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "@types/gapi.drive@npm:0.0.9"
+  dependencies:
+    "@types/gapi": "npm:*"
+  checksum: 10c0/f34401b7f8743b3122f5cfa815dcf007ae795c01d7836c318af9e345983e5ddd89410c998c253f1f854a6596a1439a467e396edc8dcc963b44542386a3abbfc2
+  languageName: node
+  linkType: hard
+
+"@types/gapi@npm:*, @types/gapi@npm:^0.0.47":
   version: 0.0.47
   resolution: "@types/gapi@npm:0.0.47"
   checksum: 10c0/014d7326b6182d260c33ae5b7317d7c0271263dde83b9d24fccd78481dce8877f0ec7a110467a626bf9e1c0b73f2b1935c31f5ef66f71f1328ae0926f6e8b0fe
@@ -11094,6 +11103,7 @@ __metadata:
     "@testing-library/user-event": "npm:^13.5.0"
     "@types/gapi": "npm:^0.0.47"
     "@types/gapi.client.sheets-v4": "npm:^0.0.4"
+    "@types/gapi.drive": "npm:^0.0.9"
     bootstrap: "npm:^5.3.2"
     html-react-parser: "npm:^5.0.6"
     react: "npm:^18.2.0"

@@ -73,6 +73,8 @@
         }
         .cs_team_meta {
             padding: 36px 50px 34px;
+            flex-grow: 1;
+
             @media (max-width: 1600px) {
                 padding: 36px 40px 34px;
             }
