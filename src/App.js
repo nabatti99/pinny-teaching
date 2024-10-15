@@ -13,8 +13,10 @@ import Home from "./components/Pages/Home";
 import { GApiService } from "./google-apis/gapi.service";
 import ClassroomTip from "./components/Pages/ClassroomTip";
 import ClassroomTipDetails from "./components/Pages/ClassRoomTipDetails";
+import { FirebaseService } from "./firebase-service/firebase-init";
 
 GApiService.init();
+FirebaseService.init();
 
 function App() {
     const { pathname } = useLocation();

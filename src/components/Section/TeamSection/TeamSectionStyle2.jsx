@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { GameHeader } from "../../../google-apis/constants";
 import Spacing from "../../Spacing";
 import TeamStyle2 from "../../Team/TeamStyle2";
-import Pagination from "../../Pagination";
-import { GameHeader } from "../../../google-apis/constants";
 
 export default function TeamSectionStyle2({ data }) {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const currentLearningStyle = searchParams?.["learningStyle"];
+
     const [view, setView] = useState("grid");
-    const [active, setActive] = useState("ALL");
+    const [active, setActive] = useState(currentLearningStyle || "all");
     const [filteredData, setFilteredData] = useState(data);
 
     // Extracting unique categories from teamData
     const uniqueCategories = [...new Set(data.map((doctor) => doctor[GameHeader.LEARNING_STYLE]))];
-    const handleFilter = (category) => {
-        console.log(category);
+    const handleFilter = (learningStyle) => {
+        setSearchParams({ learningStyle });
 
-        if (category === "ALL") {
+        if (learningStyle === "all") {
             setFilteredData(data);
         } else {
-            const filtered = data.filter((game) => game[GameHeader.LEARNING_STYLE] === category);
+            const filtered = data.filter((game) => game[GameHeader.LEARNING_STYLE] === learningStyle);
             setFilteredData(filtered);
         }
-        setActive(category);
+        setActive(learningStyle);
     };
 
     useEffect(() => {
@@ -35,8 +38,8 @@ export default function TeamSectionStyle2({ data }) {
                 <div className="cs_isotop_filter cs_style1">
                     <p className="mb-0">Sort by</p>
                     <ul className="cs_mp0">
-                        <li className={active === "ALL" ? "active" : ""}>
-                            <span onClick={() => handleFilter("ALL")}>All</span>
+                        <li className={active === "all" ? "active" : ""}>
+                            <span onClick={() => handleFilter("all")}>All</span>
                         </li>
                         {uniqueCategories?.map((item) => (
                             <li className={active === item ? "active" : ""} key={item}>

@@ -1,17 +1,13 @@
-import React from "react";
-import Hero from "../Hero";
-import AboutSection from "../Section/AboutSection";
-import BrandsSection from "../Section/BrandsSection";
-import Banner from "../Section/BannerSection";
-import Section from "../Section";
-import FeaturesSection from "../Section/FeaturesSection";
-import TestimonialSection from "../Section/TestimonialSection";
-import BlogSection from "../Section/BlogSection";
-import AppointmentSection from "../Section/AppointmentSection";
-import FaqSection from "../Section/FaqSection";
-import AwardSection from "../Section/AwardSection";
-import DepartmentSection from "../Section/DepartmentSection";
+import React, { useEffect, useState } from "react";
+import { getClassRoomTips, getFlashCards, getGames } from "../../google-apis/sheet-api";
 import { pageTitle } from "../../helpers/PageTitle";
+import Hero from "../Hero";
+import Section from "../Section";
+import AwardSection from "../Section/AwardSection";
+import BlogSection from "../Section/BlogSection";
+import DepartmentSection from "../Section/DepartmentSection";
+import FeaturesSection from "../Section/FeaturesSection";
+import { GameHeader } from "../../google-apis/constants";
 const featureListData = [
     {
         iconSrc: "/images/home_1/compassion.svg",
@@ -40,43 +36,6 @@ const featureListData = [
         subTitle: "We acknowledge the time constraints educators face, so we offer efficient resources that can streamline lesson planning and preparation to save more time.",
     },
 ];
-const brandData = [
-    { imgUrl: "images/brand_1.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_2.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_3.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_4.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_5.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_6.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_7.png", imgAlt: "Brand" },
-    { imgUrl: "images/brand_8.png", imgAlt: "Brand" },
-];
-const faqData = [
-    {
-        title: "What services does ProHealth offer?",
-        content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-    },
-    {
-        title: "How do I schedule an appointment with ProHealth?",
-        content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-    },
-    {
-        title: "Do you accept insurance?",
-        content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-    },
-    {
-        title: "What should I bring to my appointment?",
-        content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-    },
-    {
-        title: "How do I request a prescription refill?",
-        content:
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-    },
-];
 const blogData = [
     {
         title: "The Benefits of Mindfulness Meditation for Stress and Anxiety",
@@ -103,67 +62,38 @@ const blogData = [
         socialShare: true,
     },
 ];
-const awardData = [
-    {
-        title: "Flash Card 1",
-        subTitle:
-            "This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.",
-        iconUrl: "images/icons/award.svg",
-        href: "/flash-cards/flash-card-1",
-    },
-    {
-        title: "Flash Card 2",
-        subTitle: "This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.",
-        iconUrl: "images/icons/award.svg",
-        href: "/flash-cards/flash-card-2",
-    },
-    {
-        title: "Flash Card 3",
-        subTitle: "This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.",
-        iconUrl: "images/icons/award.svg",
-        href: "/flash-cards/flash-card-3",
-    },
-    {
-        title: "Flash Card 4",
-        subTitle: "This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.",
-        iconUrl: "images/icons/award.svg",
-        href: "/flash-cards/flash-card-4",
-    },
-];
-const departmentData = [
-    {
-        title: "Auditory Learners",
-        iconUrl: "images/home_1/department_icon_1.svg",
-        href: "/games?type=AUDITORY_LEARNERS",
-    },
-    {
-        title: "Visual Learners",
-        iconUrl: "images/home_1/department_icon_2.svg",
-        href: "/games?type=VISUAL_LEARNERS",
-    },
-    {
-        title: "Kinesthetic Learners",
-        iconUrl: "images/home_1/department_icon_3.svg",
-        href: "/games?type=KINESTHETIC_LEARNERS",
-    },
-    {
-        title: "Young Children",
-        iconUrl: "images/home_1/department_icon_4.svg",
-        href: "/games?type=YOUNG_CHILDREN",
-    },
-    {
-        title: "Adolescents",
-        iconUrl: "images/home_1/department_icon_5.svg",
-        href: "/games?type=ADOLESCENTS",
-    },
-    {
-        title: "Adults",
-        iconUrl: "images/home_1/department_icon_6.svg",
-        href: "/games?type=ADULTS",
-    },
-];
 
 export default function Home() {
+    const [flashCards, setFlashCards] = useState([]);
+
+    useEffect(() => {
+        getFlashCards(40, 0).then((res) => {
+            setFlashCards(res);
+        });
+    }, []);
+
+    const [games, setGames] = useState([]);
+
+    useEffect(() => {
+        getGames(40, 0).then((res) => {
+            setGames(res);
+        });
+    }, []);
+
+    const gamesData = games.map((game) => ({
+        title: game[GameHeader.NAME],
+        iconUrl: "images/home_1/puzzle-alt.svg",
+        href: `/games/${game[GameHeader.NO]}`,
+    }));
+
+    const [classroomTips, setClassroomTips] = useState([]);
+
+    useEffect(() => {
+        getClassRoomTips(40, 0).then((res) => {
+            setClassroomTips(res);
+        });
+    }, []);
+
     pageTitle("Home");
     return (
         <>
@@ -218,13 +148,13 @@ export default function Home() {
             {/* End About Section */}
             {/* Start Departments Section */}
             <Section topMd={185} topLg={150} topXl={110}>
-                <DepartmentSection sectionTitle="Games" bgUrl="images/home_1/department_bg.svg" data={departmentData} />
+                {gamesData.length > 0 && <DepartmentSection sectionTitle="Games" bgUrl="images/home_1/department_bg.svg" data={gamesData} />}
             </Section>
 
             {/* End Departments Section */}
             {/* Start Award Section */}
             <Section topMd={185} topLg={140} topXl={100}>
-                <AwardSection sectionTitle="Flash Cards" data={awardData} />
+                <AwardSection sectionTitle="Flash Cards" data={flashCards} />
             </Section>
             {/* End Award Section */}
             {/* Start Testimonial */}
@@ -244,7 +174,7 @@ export default function Home() {
             {/* End Banner Section */}
             {/* Start Blog Section */}
             <Section topMd={190} topLg={145} topXl={105}>
-                <BlogSection sectionTitle="Latest Update" sectionTitleUp="CLASSROOM TIPS" data={blogData} />
+                <BlogSection sectionTitle="Latest Update" sectionTitleUp="CLASSROOM TIPS" data={classroomTips} />
             </Section>
             {/* End Blog Section */}
             {/* Start Appointment Section */}

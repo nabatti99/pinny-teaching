@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import BannerSectionStyle5 from "../Section/BannerSection/BannerSectionStyle5";
-import BannerSectionStyle4 from "../Section/BannerSection/BannerSectionStyle4";
-import TeamSectionStyle2 from "../Section/TeamSection/TeamSectionStyle2";
-import Section from "../Section";
-import { pageTitle } from "../../helpers/PageTitle";
 import { getGames } from "../../google-apis/sheet-api";
+import { pageTitle } from "../../helpers/PageTitle";
+import Section from "../Section";
+import BannerSectionStyle4 from "../Section/BannerSection/BannerSectionStyle4";
+import BannerSectionStyle5 from "../Section/BannerSection/BannerSectionStyle5";
+import TeamSectionStyle2 from "../Section/TeamSection/TeamSectionStyle2";
 
 export default function Games() {
     const [data, setData] = useState([]);
