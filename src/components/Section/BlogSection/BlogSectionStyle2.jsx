@@ -14,7 +14,7 @@ export default function BlogSectionStyle2({ data }) {
                 ))}
             </div>
             <Spacing md="110" lg="70" />
-            <Pagination />
+            {/* <Pagination /> */}
         </div>
     );
 }
