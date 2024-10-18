@@ -6,13 +6,12 @@ import Newsletter from "../Widget/Newsletter";
 import TextWidget from "../Widget/TextWidget";
 const menuDataOne = [
     { title: "Games", href: "/games" },
-    { title: "Game 1", href: "/games?type=GAME1" },
-    { title: "Game 2", href: "/games?type=GAME2" },
+    { title: "Visual Learners", href: "/games?learningStyle=Visual Learners" },
+    { title: "For Kids", href: "/games?forKids=1" },
     { title: "Flash Cards", href: "/flash-cards" },
 ];
 const menuDataTwo = [
-    { title: "Timetable", href: "/timetable" },
-    { title: "Blog", href: "/blogs" },
+    { title: "Classroom Tips", href: "/classroom-tips" },
     { title: "About Us", href: "/about-us" },
 ];
 
