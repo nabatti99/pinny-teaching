@@ -29,7 +29,7 @@ export default function FlashCardDetails() {
         });
     }, [data]);
 
-    pageTitle(`${data[FlashCardHeader.NAME]} - Flash Card`);
+    pageTitle([data && data[FlashCardHeader.NAME], "Flash Card"].filter(Boolean).join(" - "));
     return (
         <>
             {/* <BreadcrumbStyle2 /> */}

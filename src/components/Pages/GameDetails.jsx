@@ -29,7 +29,7 @@ export default function GameDetails() {
         });
     }, [data]);
 
-    pageTitle(`${data[GameHeader.NAME]} - Game`);
+    pageTitle([data && data[GameHeader.NAME], "Game"].filter(Boolean).join(" - "));
     return (
         <>
             {/* <BreadcrumbStyle2 /> */}

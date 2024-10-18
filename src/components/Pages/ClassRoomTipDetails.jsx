@@ -30,7 +30,7 @@ export default function ClassroomTipDetails() {
         });
     }, [data]);
 
-    pageTitle(`${data[ClassroomTipHeader.NAME]} - Classroom Tip`);
+    pageTitle([data && data[ClassroomTipHeader.NAME], "Classroom Tip"].filter(Boolean).join(" - "));
     return data ? (
         <>
             <Section topMd={170} bottomMd={54} bottomLg={54}>
