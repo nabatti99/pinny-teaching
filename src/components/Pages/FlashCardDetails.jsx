@@ -29,7 +29,7 @@ export default function FlashCardDetails() {
         });
     }, [data]);
 
-    pageTitle("Flash Card Details");
+    pageTitle(`${data[FlashCardHeader.NAME]} - Flash Card`);
     return (
         <>
             {/* <BreadcrumbStyle2 /> */}

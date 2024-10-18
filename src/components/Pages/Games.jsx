@@ -15,7 +15,7 @@ export default function Games() {
         });
     }, []);
 
-    pageTitle("Doctors");
+    pageTitle("Games");
     return (
         <>
             <BannerSectionStyle5

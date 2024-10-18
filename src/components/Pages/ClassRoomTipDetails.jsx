@@ -30,7 +30,7 @@ export default function ClassroomTipDetails() {
         });
     }, [data]);
 
-    pageTitle("Classroom Tip Details");
+    pageTitle(`${data[ClassroomTipHeader.NAME]} - Classroom Tip`);
     return data ? (
         <>
             <Section topMd={170} bottomMd={54} bottomLg={54}>
@@ -59,8 +59,8 @@ export default function ClassroomTipDetails() {
             <Spacing md="200" xl="150" lg="110" />
             <Section className="cs_footer_margin_0">
                 <BannerSectionStyle9
-                    title="Don’t Let Your Health <br />Take a Backseat!"
-                    subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
+                    title="TEACH WITH EASE"
+                    subTitle="We are committed to providing you with innovative and effective teaching resources to help you inspire and engage your students."
                     imgUrl="/images/doctors/banner_img_3.png"
                 />
             </Section>

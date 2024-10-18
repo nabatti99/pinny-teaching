@@ -35,7 +35,7 @@ export default function FlashCards() {
         });
     }, []);
 
-    pageTitle("Departments");
+    pageTitle("Flash Cards");
     return (
         <>
             <BannerSectionStyle5

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getGamePptx, getGameThumbnail } from "../../google-apis/drive-api";
+import { GameHeader } from "../../google-apis/constants";
+import { getGamePptx } from "../../google-apis/drive-api";
 import { getGameById } from "../../google-apis/sheet-api";
 import { pageTitle } from "../../helpers/PageTitle";
 import { getImageUrl, renderP } from "../../utils";
 import Section from "../Section";
 import BannerSectionStyle9 from "../Section/BannerSection/BannerSectionStyle9";
 import GameDetailsSection from "../Section/DoctorDetailsSection";
-import { GameHeader } from "../../google-apis/constants";
 
 export default function GameDetails() {
     const { gameId } = useParams();
@@ -29,7 +29,7 @@ export default function GameDetails() {
         });
     }, [data]);
 
-    pageTitle("Game Details");
+    pageTitle(`${data[GameHeader.NAME]} - Game`);
     return (
         <>
             {/* <BreadcrumbStyle2 /> */}

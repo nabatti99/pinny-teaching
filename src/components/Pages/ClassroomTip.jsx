@@ -15,7 +15,7 @@ export default function ClassroomTip() {
         });
     }, []);
 
-    pageTitle("Blog");
+    pageTitle("Classroom Tips");
     return (
         <>
             <Section topMd={170} bottomMd={96} bottomLg={70}>
