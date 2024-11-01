@@ -17,8 +17,7 @@ const featureListData = [
     {
         iconSrc: "/images/home_1/excellence.svg",
         title: "Diversity",
-        subTitle:
-            "We are committed to providing excellent medical care and services to our patients. We believe in continuously improving our skills, knowledge, and resources to ensure that we deliver the highest quality care possible.",
+        subTitle: "We believe that every student learns differently, so we offer a wide range of resources to cater to various learning styles and age groups.",
     },
     {
         iconSrc: "/images/home_1/integrity.svg",
