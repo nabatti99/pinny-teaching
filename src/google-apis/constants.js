@@ -1,35 +1,36 @@
 export const GameHeader = {
-    NO: "No",
-    DRIVE_FOLDER_ID: "Drive Folder ID",
-    THUMBNAIL_FILE_ID: "Thumbnail File ID",
-    NAME: "Name",
-    AGE: "Age",
-    LEARNING_STYLE: "Learning Style",
-    STORYLINE: "Storyline",
-    HOW_TO_PLAY: "How To Play",
-    NOTES: "Notes",
+  NO: "No",
+  DRIVE_FOLDER_ID: "Drive Folder ID",
+  THUMBNAIL_FILE_ID: "Thumbnail File ID",
+  NAME: "Name",
+  AGE: "Age",
+  LEARNING_STYLE: "Learning Style",
+  STORYLINE: "Storyline",
+  HOW_TO_PLAY: "How To Play",
+  NOTES: "Notes",
+  VIDEO_URL: "Video Url",
 };
 
 export const FlashCardHeader = {
-    NO: "No",
-    DRIVE_FOLDER_ID: "Drive Folder ID",
-    THUMBNAIL_FILE_ID: "Thumbnail File ID",
-    NAME: "Name",
-    DESCRIPTION: "Description",
+  NO: "No",
+  DRIVE_FOLDER_ID: "Drive Folder ID",
+  THUMBNAIL_FILE_ID: "Thumbnail File ID",
+  NAME: "Name",
+  DESCRIPTION: "Description",
 };
 
 export const ClassroomTipHeader = {
-    NO: "No",
-    DRIVE_FOLDER_ID: "Drive Folder ID",
-    THUMBNAIL_FILE_ID: "Thumbnail File ID",
-    DOCUMENT_FILE_ID: "Document File ID",
-    NAME: "Name",
-    DATE_AND_AUTHOR: "Date & Author",
+  NO: "No",
+  DRIVE_FOLDER_ID: "Drive Folder ID",
+  THUMBNAIL_FILE_ID: "Thumbnail File ID",
+  DOCUMENT_FILE_ID: "Document File ID",
+  NAME: "Name",
+  DATE_AND_AUTHOR: "Date & Author",
 };
 
 export const MemberHeader = {
-    NO: "No",
-    THUMBNAIL_FILE_ID: "Thumbnail File ID",
-    NAME: "Name",
-    ROLE: "Role",
+  NO: "No",
+  THUMBNAIL_FILE_ID: "Thumbnail File ID",
+  NAME: "Name",
+  ROLE: "Role",
 };

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export default function Spacing({ xl = '_', lg = '_', md = '_' }) {
+export default function Spacing({ xl = "_", lg = "_", md = "_", sm = "_" }) {
   return (
     <div
-      className={`cs_height_xl_${xl} cs_height_lg_${lg} cs_height_${md}`}
+      className={`cs_height_xl_${xl} cs_height_lg_${lg} cs_height_${md} cs_height_sm_${sm}`}
     ></div>
   );
 }
