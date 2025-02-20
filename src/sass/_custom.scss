@@ -582,6 +582,9 @@ form button:hover {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  @media (max-width: 767px) {
+    align-items: start;
+  }
 }
 
 .reply-header .avatar {
