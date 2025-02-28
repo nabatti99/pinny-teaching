@@ -17,6 +17,7 @@ const CommentSection = ({ type, id }) => {
     content: "",
   });
   const [error, setError] = useState("");
+  const [error2, setError2] = useState("");
   const [showReplies, setShowReplies] = useState({});
   const [visibleComments, setVisibleComments] = useState(5);
   const [editingComment, setEditingComment] = useState(null);
@@ -65,10 +66,16 @@ const CommentSection = ({ type, id }) => {
     setReplyContent({ ...replyContent, [name]: value });
   };
 
+  const blockedPattern = /pinny[\W_]*teaching[\W\d_]*/i;
   const handleAddComment = (e) => {
     e.preventDefault();
+    const name = newComment.name.trim();
     if (!newComment.name.trim() || !newComment.content.trim()) {
       setError("Name and Comment content are required.");
+      return;
+    }
+    if (blockedPattern.test(name)) {
+      setError("This name is not allowed, please try again.");
       return;
     }
     setError("");
@@ -78,10 +85,16 @@ const CommentSection = ({ type, id }) => {
 
   const handleAddReply = (e, parentId) => {
     e.preventDefault();
+    const name = replyContent.name.trim();
     if (!replyContent.name.trim() || !replyContent.content.trim()) {
-      alert("Name and Reply content are required.");
+      setError2("Name and Reply content are required.");
       return;
     }
+    if (blockedPattern.test(name)) {
+      setError2("This name is not allowed, please try again.");
+      return;
+    }
+    setError2("");
     const repliesRef = ref(
       FirebaseService.database,
       `comments/${type}/${id}/${parentId}/replies`
@@ -194,6 +207,8 @@ const CommentSection = ({ type, id }) => {
     setEditingContent("");
   };
 
+  const isAdminUser = (name) => /@admin/i.test(name);
+
   return (
     <div className="container">
       <div className="comment-section">
@@ -228,15 +243,31 @@ const CommentSection = ({ type, id }) => {
           {comments.slice(0, visibleComments).map((comment) => (
             <div className="comment" key={comment.id}>
               <div className="comment-header">
+                {/* <div
+                  className="avatar"
+                  style={{
+                    backgroundImage: `url("/images/user.png")`,
+                  }}
+                /> */}
                 <div
                   className="avatar"
                   style={{
-                    backgroundImage: `url("/images/logo_comment.png")`,
+                    backgroundImage: isAdminUser(comment.name)
+                      ? `url("/images/logo_comment.png")`
+                      : `url("/images/user.png")`,
                   }}
                 />
                 <div className="comment-body">
-                  <div className="name">
+                  {/* <div className="name">
                     {comment.name} {comment.email && `(${comment.email})`}
+                  </div> */}
+                  <div className="name">
+                    {isAdminUser(comment.name)
+                      ? "Pinny Teaching"
+                      : comment.name}
+                    {comment.email &&
+                      !isAdminUser(comment.name) &&
+                      `(${comment.email})`}
                   </div>
                   {editingComment === comment.id ? (
                     <textarea
@@ -331,6 +362,9 @@ const CommentSection = ({ type, id }) => {
                     onChange={handleReplyInputChange}
                   />
                   <button type="submit">Save</button>
+                  {error2 && (
+                    <p style={{ color: "red", marginTop: "5px" }}>{error2}</p>
+                  )}
                 </form>
               )}
 
@@ -342,15 +376,31 @@ const CommentSection = ({ type, id }) => {
                       .map(([replyId, reply]) => (
                         <div className="reply" key={replyId}>
                           <div className="reply-header">
-                            <div
+                            {/* <div
                               className="avatar"
                               style={{
                                 backgroundImage: `url("/images/logo_comment.png")`,
                               }}
+                            /> */}
+                            <div
+                              className="avatar"
+                              style={{
+                                backgroundImage: isAdminUser(reply.name)
+                                  ? `url("/images/logo_comment.png")`
+                                  : `url("/images/user.png")`,
+                              }}
                             />
                             <div className="reply-body">
-                              <div className="name">
+                              {/* <div className="name">
                                 {reply.name} {reply.email && `(${reply.email})`}
+                              </div> */}
+                              <div className="name">
+                                {isAdminUser(reply.name)
+                                  ? "Pinny Teaching"
+                                  : reply.name}
+                                {reply.email &&
+                                  !isAdminUser(reply.name) &&
+                                  `(${reply.email})`}
                               </div>
                               {editingReply === replyId ? (
                                 <textarea
@@ -406,6 +456,9 @@ const CommentSection = ({ type, id }) => {
                                   }
                                 >
                                   Delete
+                                </button>
+                                <button className="note-edit">
+                                  Deletable and Editable within 10 minutes
                                 </button>
                               </>
                             )}

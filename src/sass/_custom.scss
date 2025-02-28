@@ -613,6 +613,12 @@ form button:hover {
   }
 }
 
+.reply-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .reply-actions button {
   // margin-right: 10px;
   border: none;
