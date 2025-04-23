@@ -9,6 +9,7 @@ export const GameHeader = {
   HOW_TO_PLAY: "How To Play",
   NOTES: "Notes",
   VIDEO_URL: "Video Url",
+  TYPE: "Type",
 };
 
 export const FlashCardHeader = {
