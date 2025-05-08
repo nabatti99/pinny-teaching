@@ -35,9 +35,12 @@ export default function GameDetails() {
   pageTitle(
     [data && data[GameHeader.NAME], "Game"].filter(Boolean).join(" - ")
   );
-  const videoUrl =
-    data?.[GameHeader.VIDEO_URL] && getVideoUrl(data[GameHeader.VIDEO_URL]);
-  const isVideoAvailable = videoUrl !== undefined;
+  // const videoUrl =
+  //   data?.[GameHeader.VIDEO_URL] && getVideoUrl(data[GameHeader.VIDEO_URL]);
+  // const isVideoAvailable = videoUrl !== undefined;
+  const rawVideoUrl = data?.[GameHeader.VIDEO_URL];
+  const videoUrl = rawVideoUrl?.trim() ? getVideoUrl(rawVideoUrl) : null;
+  const isVideoAvailable = Boolean(videoUrl);
   const bgUrl = videoUrl ? "none" : "/images/doctors/doctor_details_bg.svg";
   return (
     <>
